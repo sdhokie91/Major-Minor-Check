@@ -1,0 +1,44 @@
+print ("Welcome to the Virginia Tech Minor Finder!.")
+print ("This Program will help you find a Minor that can be achieved with minimal extra classes needed to be taken.")
+print ("")
+# List Majors and their abbreviations
+MAF = ['Accounting & Information Systems: ACIS',
+       'Aerospace Engineering: AE',
+       'Biochemistry: BCHM',
+       'Clinical Neuroscience: CNEU',
+       'Finance: FIN',
+       'Forestry: FORS',
+       'Industrial Design: ID',
+       'Materials Science & Engineering: MSE',
+       'Nanoscience: NANO',
+       'Russian: RUS',
+       'Systems Biology: SYSB',
+       'Wildlife Conservation: WLC']
+# List Majors and their required courses
+Majors = {
+    'FIN' : ['BIT2406', 'ECON2005', 'ECON2006', 'FIN3104', 'FIN3134']
+    }
+# List Minors and their required courses
+Minors = {
+    'Actuarial Science' : ['STAT4105' or 'STAT 4705']
+    }
+
+       
+a = input("Enter your Major by the abbreviated form (such as Mechanical Engineering = ME). To see a list of majors and their abbreviated form, type MAF: ")
+
+while True:
+    if a == 'MAF':
+        for elem in MAF:
+            print (elem)
+        print ("")
+        a = input("Enter your Major by the abbreviated form (such as Mechanical Engineering = ME)")
+        break
+    if a in Majors:
+        break
+    print ("That abgreviation or command is not recognized, please try again")
+    a = input("Enter your Major by the abbreviated form (such as Mechanical Engineering = ME). To see a list of majors and their abbreviated form, type MAF: ")
+   
+if a in Majors:
+    the_major = Majors[a]
+    print (the_major)    
+
